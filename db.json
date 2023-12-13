@@ -1,9 +1,9 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+    "settings": [
+        {"id": 1, "name": "American Idiot - Green Day"}
+    ],
+
+    "parameters": [
+        {"id": 1, "label": "Treble", "value": 5, "settingId": 1}
+    ]
 }

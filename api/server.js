@@ -17,11 +17,15 @@ const router = jsonServer.router(db)
 const middlewares = jsonServer.defaults()
 
 server.use(middlewares)
+
 // Add this before server.use(router)
 server.use(jsonServer.rewriter({
     '/api/*': '/$1',
-    '/blog/:resource/:id/show': '/:resource/:id'
+    '/settings/parameters': '/settings?_embed=parameters',
+    '/settings/:setId': '/settings/:setId?_embed=parameters',
+    '/settings/:setId/parameters/:paramId': '/settings/:setId/parameters?id=:paramId'
 }))
+
 server.use(router)
 server.listen(3000, () => {
     console.log('JSON Server is running')
